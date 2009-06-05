@@ -59,9 +59,7 @@ class EvalHelpersSymbolTaintedMethodTest < Test::Unit::TestCase
   end
   
   def test_should_not_raise_security_error
-    assert_nothing_raised do
-      evaluate_method(@object, :callback, 1, 2, 3)
-    end
+    assert_nothing_raised { evaluate_method(@object, :callback, 1, 2, 3) }
   end
 end
 
